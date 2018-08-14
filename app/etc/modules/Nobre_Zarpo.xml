@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Nobre_Zarpo>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Nobre_Zarpo>
+    </modules>
+</config>

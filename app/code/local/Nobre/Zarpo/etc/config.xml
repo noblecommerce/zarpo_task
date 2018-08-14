@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Nobre_Zarpo>
+            <version>1.0.0</version>
+        </Nobre_Zarpo>
+    </modules>
+    <global>
+        <events>
+            <sales_quote_add_item>
+                <observers>
+                    <cart_update>
+                        <type>singleton</type>
+                        <class>Nobre_Zarpo_Model_Observer</class>
+                        <method>addItem</method>
+                    </cart_update>
+                </observers>
+            </sales_quote_add_item>
+        </events>
+    </global>
+</config>

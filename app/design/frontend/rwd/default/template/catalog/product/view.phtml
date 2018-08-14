@@ -67,7 +67,12 @@
                 <div class="extra-info">
                     <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
                     <?php echo $this->getChildHtml('product_type_availability'); ?>
+					
+					Date of delivery:
+                    <?php $_product->getResource()->getAttribute('date_of_delivery')->getFrontend()->getValue($_product);?>
+                    <?php echo date("m/d/y", strtotime($_product->getData('date_of_delivery'))) ?>
                 </div>
+				
 
                 <?php echo $this->getChildHtml('alert_urls') ?>
 
@@ -76,8 +81,6 @@
                         <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
                     </div>
                 <?php endif;?>
-
-
 
 
                 <?php echo $this->getChildHtml('other');?>
